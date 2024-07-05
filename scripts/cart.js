@@ -44,10 +44,14 @@ function handleDiscount(event) {
   const total = document.getElementById("total");
   const discount = document.getElementById("discount");
   discountDiv.style.display = "block";
-  discount.textContent = `Rp ${Intl.NumberFormat().format(price.discounts)}`;
-  total.textContent = `Rp ${Intl.NumberFormat().format(
+  const numberFormat = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+  });
+  discount.textContent = numberFormat.format(price.discounts);
+  total.textContent = numberFormat.format(
     price.total - price.discounts + price.tax
-  )}`;
+  );
   event.preventDefault();
 }
 
