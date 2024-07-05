@@ -7,7 +7,7 @@
 - [x] Testimony
 - [x] Login
 - [x] Register
-- [ ] About us
+- [X] About us
 - [x] Contact us
 - [x] Keranjang
 
