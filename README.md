@@ -24,9 +24,9 @@
 - [X] Classes
     - [X] Repository
     - [X] UI
-- [ ] Keranjang
+- [X] Keranjang
     - [X] Repository
-    - [ ] UI
+    - [X] UI
 
 ## Database Relation
 
