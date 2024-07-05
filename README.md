@@ -12,15 +12,22 @@
 - [x] Keranjang
 
 ### Dynamic
-- [ ] Login
-    - [ ] Repository
-    - [ ] UI
-- [ ] Register
-    - [ ] Repository
-    - [ ] UI
-- [ ] Contact us
-    - [ ] Repository
-    - [ ] UI
+- [X] Login
+    - [X] Repository
+    - [X] UI
+- [X] Register
+    - [X] Repository
+    - [X] UI
+- [X] Contact us
+    - [X] Repository
+    - [X] UI
+- [X] Classes
+    - [X] Repository
+    - [X] UI
 - [ ] Keranjang
-    - [ ] Repository
+    - [X] Repository
     - [ ] UI
+
+## Database Relation
+
+![image](assets/docs/relation.png)

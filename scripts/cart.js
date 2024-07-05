@@ -1,17 +1,17 @@
-const carts = [
-  {
-    name: "Kelas Bahasa Jepang Dasar",
-    price: 50000,
-  },
-  {
-    name: "Kelas Bahasa Jepang Menengah",
-    price: 100000,
-  },
-  {
-    name: "Kelas Bahasa Jepang Dasar",
-    price: 50000,
-  },
-];
+// const carts = [
+//   {
+//     name: "Kelas Bahasa Jepang Dasar",
+//     price: 50000,
+//   },
+//   {
+//     name: "Kelas Bahasa Jepang Menengah",
+//     price: 100000,
+//   },
+//   {
+//     name: "Kelas Bahasa Jepang Dasar",
+//     price: 50000,
+//   },
+// ];
 
 const registeredVouchers = new Map([
   ["FTGO", 10],
@@ -43,11 +43,19 @@ function handleDiscount(event) {
   let price = getDiscountedPrice(carts, voucher);
   const total = document.getElementById("total");
   const discount = document.getElementById("discount");
+  const originalPrice = document.getElementById("original_price");
+  const tax = document.getElementById("tax");
   discountDiv.style.display = "block";
-  discount.textContent = `Rp ${Intl.NumberFormat().format(price.discounts)}`;
-  total.textContent = `Rp ${Intl.NumberFormat().format(
+  const numberFormat = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+  });
+  discount.textContent = numberFormat.format(price.discounts);
+  originalPrice.textContent = numberFormat.format(price.total);
+  tax.textContent = numberFormat.format(price.tax);
+  total.textContent = numberFormat.format(
     price.total - price.discounts + price.tax
-  )}`;
+  );
   event.preventDefault();
 }
 
